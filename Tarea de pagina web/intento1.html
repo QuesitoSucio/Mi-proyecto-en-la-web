@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <style>
+        /* Estilo general */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Barra superior */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar a {
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .navbar a.white-bold {
+            color: white;
+        }
+
+        .navbar a.white-opacity {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .navbar a:hover {
+            color: white;
+        }
+
+        /* Seccione */
+        .section {
+            padding: 100px 20px;
+            margin-top: 60px;
+        }
+
+        .section:nth-child(odd) {
+            background-color: #fe5500;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .section:nth-child(even) {
+            background-color: #ffffff;
+        }
+
+        .section h1 {
+            text-align: center;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Primera fila */
+        .who-am-i img {
+            width: 50%;
+            border-radius: 10px;
+        }
+
+        .who-am-i .content {
+            flex: 1;
+            padding-left: 20px;
+        }
+
+        .who-am-i h2 {
+            font-size: 2em;
+        }
+
+        .who-am-i p {
+            margin: 10px 0;
+            font-size: 1em;
+        }
+
+        .who-am-i button {
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Segunda fila */
+       
+        .profile img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .profile h2 {
+            color: #ffffff;
+            text-align: center;
+            margin-top: 10px;
+            text-decoration: underline;
+            font-style: italic;
+        }
+
+        /* Tercera fila */
+        .projects .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .project {
+            text-align: center;
+        }
+
+        .project img {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+        }
+
+        .project button {
+            padding: 10px 15px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <span>Duvan Torres</span>
+        <div>
+            <a href="#inicio" class="white-bold">Inicio</a>
+            <a href="#quien-soy" class="white-opacity">¿Quién soy?</a>
+            <a href="#mis-proyectos" class="white-opacity">Proyectos</a>
+        </div>
+    </div>
+
+    <div id="inicio" class="section who-am-i">
+        <div class="row">
+            <img src=PersonaFrenteAlComputador.jpg alt="Imagen1">
+            <div class="content">
+                <h2>¿Quién soy?</h2>
+                <p>Soy Duvan Andres Mantilla torres, un aprendiz de programacion, mis motivaciones se puede decir que son aprender tanto como sea posible, son las 3 a.m, estoy cansado pero al fin logre ubicar todo donde queria luego de mucho esfuerzo, ya solo me falta agregar las partes del texto e imagenes, estoy cansado jefe :"/</p>
+                <button>Leer más</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="quien-soy" class="section profile">
+        <img src="myAvatar.png" alt="Imagen redonda">
+        <h1>Una persona promedio en cuanto a apariencia y conocimiento, con metas a futuro y ansias de aprender mas.</h1>
+        <h2>- Duvan Torres</h2>
+    </div>
+
+    <div id="mis-proyectos" class="section projects">
+        <h1>Mis proyectos</h1>
+        <div class="grid">
+            <div class="project">
+                <img src="apple-worm.png" alt="Proyecto 1">
+                <p>En cuantoa mis proyectos en programacion, tengo el objetivo de completar el juego de "El Gusanito", apenas he avanzado en la caja que contiene a la entidad y estoy trabajando en meter las dos dimensiones correspondientes del juego.</p>
+                <button>Ver proyecto</button>
+            </div>
+            <div class="project">
+                <img src="450_1000.jpg" alt="Proyecto 2">
+                <p>Proyecto 2</p>
+                <button>Ver proyecto</button>
+            </div>
+            <div class="project">
+                <img src="descarga.jpeg" alt="Proyecto 3">
+                <p>Proyecto 3</p>
+                <button>Ver proyecto</button>
+            </div>
+            <div class="project">
+                <img src="images.jpeg" alt="Proyecto 4">
+                <p>Proyecto 4</p>
+                <button>Ver proyecto</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
